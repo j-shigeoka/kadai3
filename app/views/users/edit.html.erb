@@ -13,16 +13,25 @@
       <% end %>
       
       <%= form_with model: @user do |f| %>
-      <h6>Name</h6>
-        <%= f.text_field :name %>
-        
-      <label for="inputImage">Image</label>
-        <%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %>  
-        
-      <h6>Introduction</h6>
-        <%= f.text_area :introduction %>
-          
-        <%= f.submit 'Update User',class: "btn btn-secondary" %>
+      <div>
+        <label for="user_name">Name</label>
+          <br><%= f.text_field :name %>
+      </div>
+      
+      <div>
+        <label for="inputImage">Image</label>
+          <br><%= f.file_field :profile_image, placeholder: "プロフィール画像", accept: "image/*" %>  
+      </div>
+      
+      <div>
+        <label for="user_introduction">Introduction</label>
+          <br><%= f.text_area :introduction %>
+      </div>
+      
+      <div>
+          <%= f.submit 'Update User',class: "btn btn-secondary" %>
+      </div>
+      
       <% end %>
     </div>
   </div>
